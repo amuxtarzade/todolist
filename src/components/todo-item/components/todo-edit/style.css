@@ -1,0 +1,15 @@
+.EditIconBox {
+  width: 24px;
+  height: 24px;
+  border-radius: 4px;
+  display: grid;
+  place-content: center;
+}
+
+.EditIconBox:hover {
+  background-color: var(--gray-400);
+}
+
+.EditIconBox:hover .EditIcon path {
+  fill: var(--blue);
+}

@@ -1,0 +1,37 @@
+.Box {
+  width: 24px;
+  height: 24px;
+  display: grid;
+  place-content: center;
+}
+
+.CheckBox {
+  width: 15px;
+  height: 15px;
+  display: grid;
+  place-content: center;
+  border: 2px solid var(--blue);
+  border-radius: 15px;
+}
+
+.CheckBox:hover {
+  border: 2px solid var(--blue-dark);
+}
+
+.Active {
+  border: 2px solid var(--purple-dark);
+  background-color: var(--purple-dark);
+}
+
+.Active:hover {
+  border: 2px solid var(--purple);
+  background-color: var(--purple);
+}
+
+.CheckBox .Check path {
+  fill: transparent;
+}
+
+.Active .Check path {
+  fill: var(--gray-100);
+}

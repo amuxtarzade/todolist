@@ -1,0 +1,15 @@
+.RemoveIconBox {
+  width: 24px;
+  height: 24px;
+  border-radius: 4px;
+  display: grid;
+  place-content: center;
+}
+
+.RemoveIconBox:hover {
+  background-color: var(--gray-400);
+}
+
+.RemoveIconBox:hover .RemoveIcon path {
+  fill: var(--danger);
+}

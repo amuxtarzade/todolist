@@ -1,0 +1,22 @@
+.Logo {
+  margin-top: 72px;
+  margin-bottom: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+.Title {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  color: var(--blue);
+}
+.Title h1 {
+  font-size: 40px;
+}
+.Title h1:last-child {
+  color: var(--purple-dark);
+}

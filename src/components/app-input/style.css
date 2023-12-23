@@ -1,0 +1,19 @@
+.AppInput {
+  width: 100%;
+  border-radius: 8px;
+  border: 1px solid var(--gray-700);
+  height: 54px;
+  padding: 0 16px;
+  font-size: var(--font-large);
+  background-color: var(--gray-500);
+  color: var(--gray-100);
+}
+
+.AppInput::placeholder {
+  color: var(--gray-300);
+}
+
+.AppInput:focus {
+  outline: none;
+  border: 1px solid var(--purple-dark);
+}
