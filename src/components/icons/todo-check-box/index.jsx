@@ -1,5 +1,5 @@
 import "./style.css";
-import { ReactComponent as Check } from "../../../../assets/icons/check.svg";
+import { ReactComponent as Check } from "../../../assets/icons/check.svg";
 
 const TodoCheckBox = ({ isActive, checkTodo }) => {
   return (

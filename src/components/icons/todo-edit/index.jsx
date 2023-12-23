@@ -1,5 +1,5 @@
 import "./style.css";
-import { ReactComponent as EditIcon } from "../../../../assets/icons/edit.svg";
+import { ReactComponent as EditIcon } from "../../../assets/icons/edit.svg";
 
 const TodoEdit = ({ toggleEdit }) => {
   return (

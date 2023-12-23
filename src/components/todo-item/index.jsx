@@ -1,16 +1,27 @@
 import "./style.css";
-import TodoCheckBox from "./components/todo-check-box";
-import TodoRemove from "./components/todo-remove";
-import TodoEdit from "./components/todo-edit";
+import TodoCheckBox from "../icons/todo-check-box";
+import TodoRemove from "../icons/todo-remove";
+import TodoEdit from "../icons/todo-edit";
 import { useState } from "react";
+import TodoEditInput from "../inputs/todo-edit-input";
 
-const TodoItem = ({ todo, checkTodo, removeTodo }) => {
+const TodoItem = ({ todo, checkTodo, removeTodo, updateTodo }) => {
   const [isEditActive, setIsEditActive] = useState(false);
   return (
     <div className={todo.completed ? "TodoItem Completed" : "TodoItem"}>
       <TodoCheckBox isActive={todo.completed} checkTodo={checkTodo} />
-      {isEditActive ? <input /> : <p>{todo.task}</p>}
-      <TodoEdit toggleEdit={() => setIsEditActive(!isEditActive)} />
+      {isEditActive ? (
+        <TodoEditInput
+          value={todo.task}
+          setEditFalse={() => setIsEditActive(false)}
+          updateTodo={updateTodo}
+          removeTodo={removeTodo}
+        />
+      ) : (
+        <p>{todo.task}</p>
+      )}
+      {isEditActive || <TodoEdit toggleEdit={() => setIsEditActive(true)} />}
+
       <TodoRemove removeTodo={removeTodo} />
     </div>
   );

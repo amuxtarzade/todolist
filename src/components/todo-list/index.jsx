@@ -2,7 +2,7 @@ import "./style.css";
 import TodoItem from "../todo-item";
 import TodoEmpty from "../todo-empty";
 
-const TodoList = ({ todos, checkTodo, removeTodo, searchText }) => {
+const TodoList = ({ todos, checkTodo, removeTodo, searchText, updateTodo }) => {
   let filteredTodos = todos.filter((todo) =>
     todo.task.trim().toLowerCase().includes(searchText)
   );
@@ -15,6 +15,7 @@ const TodoList = ({ todos, checkTodo, removeTodo, searchText }) => {
             key={todo.id}
             checkTodo={() => checkTodo(todo.id)}
             removeTodo={() => removeTodo(todo.id)}
+            updateTodo={(todoText) => updateTodo(todoText, todo.id)}
           />
         );
       })}

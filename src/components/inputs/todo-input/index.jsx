@@ -1,7 +1,7 @@
 import { useRef, useState } from "react";
 import PlusIcon from "../../assets/icons/plus.svg";
 import "./style.css";
-import AppInput from "../app-input";
+import AppInput from "../inputs/app-input";
 
 const TodoInput = ({ addTodo, searchTodo }) => {
   const [isDisable, setIsDisable] = useState(true);

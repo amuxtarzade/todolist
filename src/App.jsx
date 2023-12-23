@@ -40,6 +40,14 @@ function App() {
     let newTodos = todos.filter((todo) => todo.id !== todoId);
     updateTodos(newTodos);
   }
+  function updateTodo(todoText, todoId) {
+    let todoIndex = todos.findIndex((todo) => todo.id === todoId);
+    let todo = todos[todoIndex];
+    todo.task = todoText;
+    let newTodos = [...todos];
+    newTodos[todoIndex] = todo;
+    updateTodos(newTodos);
+  }
 
   function updateSearchText(text) {
     setSearchText(text.trim().toLowerCase());
@@ -64,6 +72,7 @@ function App() {
         searchText={searchText}
         checkTodo={checkTodo}
         removeTodo={deleteTodo}
+        updateTodo={updateTodo}
       />
     </div>
   );

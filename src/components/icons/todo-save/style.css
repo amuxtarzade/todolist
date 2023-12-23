@@ -1,0 +1,15 @@
+.SaveIconBox {
+  width: 24px;
+  height: 24px;
+  border-radius: 4px;
+  display: grid;
+  place-content: center;
+}
+
+.SaveIconBox:hover {
+  background-color: var(--gray-400);
+}
+
+.SaveIconBox:hover .SaveIcon path {
+  fill: var(--success);
+}
