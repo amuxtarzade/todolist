@@ -1,6 +1,6 @@
 import React from "react";
 import "./style.css";
-import Rocket from "../../assets/images/rocket.svg";
+import Rocket from "../../../assets/images/rocket.svg";
 
 const Logo = () => {
   return (

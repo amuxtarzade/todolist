@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import "./App.css";
-import Logo from "./components/logo";
-import TodoInput from "./components/todo-input";
+import Logo from "./components/icons/logo";
+import TodoInput from "./components/inputs/todo-input";
 import random from "./utility/random";
 import TodoList from "./components/todo-list";
 import ListInfo from "./components/list-info";
